@@ -42,8 +42,6 @@ def plot_csv():
 	# Pull the Pandas Data Frames as a dictionary{}
 	data_frames = read_csv()
 
-	print(type(data_frames))
-
 	# Iterate through the dictionary{} of Data Frames.
 	for data_frame in data_frames:
 		# Plot each Data Frame separately. Assigning the x-axis and y-axis as it is on the Oscope.

@@ -1,8 +1,4 @@
 import matplotlib.pyplot as plt
-# import matplotlib.cbook as cbook
-import pandas as pd
-from os import listdir
-import matplotlib.pyplot as plt
 import pandas as pd
 from os import listdir
 

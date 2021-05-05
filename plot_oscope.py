@@ -1,4 +1,8 @@
 import matplotlib.pyplot as plt
+# import matplotlib.cbook as cbook
+import pandas as pd
+from os import listdir
+import matplotlib.pyplot as plt
 import pandas as pd
 from os import listdir
 
@@ -53,6 +57,6 @@ def plot_csv():
 	# Display all of the plots.
 	plt.show()
 
-plot_csv()
-
-
+if __name__ == "__main__":
+	print("executed directly as main")
+	plot_csv()

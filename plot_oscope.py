@@ -5,8 +5,8 @@ from os import listdir
 # Absolute path of the working directory
 working_directory = '/media/pi/disk/'
 
-# Test filename for testing purposes.
-#filename = 'TEK00000.CSV'
+# Hard coded example filename for testing purposes.
+# filename = 'TEK00000.CSV'
 
 # Function to find csv files.
 def find_files():
@@ -23,7 +23,7 @@ def find_files():
 	file_set.discard(working_directory)
 
 	# return the set of csv files
-	return file_set
+	return file_set		# set
 
 # Function to parse the csv files into Pandas Data Frames.
 def read_csv():
@@ -40,7 +40,7 @@ def read_csv():
 		pd_dict[i] = pd.read_csv(csv_file,names = ['time','voltage'])
 		# iterate the dictionary counter
 		i += 1
-	return pd_dict
+	return pd_dict		# dictionary
 
 # Function to plot the Pandas Data Frames in the same manner as an Oscope.
 def plot_csv():

@@ -2,24 +2,29 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from os import listdir
 
-# Absolute path of the working directory
-working_directory = '/media/pi/disk/'
+# Absolute path of the default directory for 3.5in floppy drive on RasPi
+default_directory = '/media/pi/disk/'
 
 # Test filename for testing purposes.
 #filename = 'TEK00000.CSV'
 
 # Function to find csv files.
-def find_files():
+#		Takes string of absolute path for the directory as input.
+#		Returns a set of the csv files in the working directory.
+def find_files(working_directory = default_directory):
+	# Instantiate empty set() to store filenames in.
 	file_set = set()
+
+	# Iterate through the files in the working directory.
 	for filename in listdir(working_directory):
-		
-		# Add the filename to set() if *.csv extension.
+
+		# Adds filename to the set() if *.csv extension.
 		# Side effect: adds a null entry of 'working_directory' that needs to be discarded later.
 		file_set.add(working_directory + filename.lower().endswith('csv') * filename)
-		
+
 	# Discard the null entry.
 	file_set.discard(working_directory)
-	
+
 	# return the set of csv files
 	return file_set
 
@@ -46,7 +51,7 @@ def plot_csv():
 	for data_frame in data_frames:
 		# Plot each Data Frame separately. Assigning the x-axis and y-axis as it is on the Oscope.
 		data_frame.plot(x='time',y='voltage')
-	
+
 	# Display all of the plots.
 	plt.show()
 

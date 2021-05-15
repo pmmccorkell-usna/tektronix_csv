@@ -44,10 +44,10 @@ def read_csv():
 
 # Function to plot the Pandas Data Frames in the same manner as an Oscope.
 def plot_csv():
-	# Pull the Pandas Data Frames as a dictionary{}
+	# Pull the Pandas Data Frames as a list[]
 	data_frames = read_csv()
 
-	# Iterate through the dictionary{} of Data Frames.
+	# Iterate through the list[] of Data Frames.
 	for data_frame in data_frames:
 		# Plot each Data Frame separately. Assigning the x-axis and y-axis as it is on the Oscope.
 		data_frame.plot(x='time',y='voltage')

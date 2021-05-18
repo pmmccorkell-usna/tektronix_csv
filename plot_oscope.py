@@ -1,3 +1,10 @@
+# Patrick McCorkell
+# May 2021
+# US Naval Academy
+# Robotics and Control TSD
+#
+
+
 import matplotlib.pyplot as plt
 import pandas as pd
 from os import listdir
